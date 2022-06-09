@@ -1,0 +1,216 @@
+.slide-itm {
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .slide-itm::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  
+  .slide-itm .container {
+    position: relative;
+    display: table;
+    max-width: 1170px;
+    height: 100%;
+  }
+  
+  .slide-itm .slide-inner {
+    -webkit-transform: translate(0, -30%);
+    transform: translate(0, -30%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  
+  .slide-itm h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .slide-itm p {
+    color: #fff;
+  }
+  
+  .slide-itm .btn-main, .slide-itm .btn-solid-border, .slide-itm .btn-transparent, .slide-itm .btn-small {
+    margin-top: 25px;
+  }
+  
+  .slide-itm.white-bg .slide-inner h1 {
+    color: #000;
+  }
+  
+  .slide-itm.white-bg .slide-inner p {
+    color: #000;
+  }
+  
+  .home-slide:hover .owl-nav {
+    opacity: 1;
+  }
+  
+  .home-slide .owl-nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .home-slide .owl-nav .owl-next, .home-slide .owl-nav .owl-prev {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .home-slide .owl-nav .owl-next {
+    right: 0px;
+    position: absolute;
+  }
+  
+  .home-slide .owl-nav i {
+    line-height: 60px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .heo-slide .slide-itm .container {
+    height: 600px;
+  }
+  
+  .heo-slide .slide-itm .container .row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heo-slide .slide-itm:focus {
+    outline: 0;
+  }
+  
+  .heo-slide .btn {
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    font-family: "Roboto Condensed";
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    outline: none;
+    box-shadow: #999999 0px 0px 0px 0px;
+    box-sizing: border-box;
+    padding: 12px 26px;
+    opacity: 1;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-transform-origin: 50% 50% 0px;
+            transform-origin: 50% 50% 0px;
+    border-radius: 0;
+    transition: 0.3s;
+  }
+  
+  .heo-slide .btn:hover {
+    color: black;
+    background-color: #fff;
+  }
+  
+  .heo-slide h1 {
+    white-space: normal;
+    font-size: 19px;
+    line-height: 49px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: -2px;
+    font-family: "Playfair Display";
+    margin-bottom: 35px;
+  }
+
+  
+
+
+  /*  */
+  .heo-aea {
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../images/home/slider-5.jpg");
+    background-size: scale-down ;
+    background-attachment: fixed;
+  }
+  
+  .heo-aea .block {
+    position: relative;
+    z-index: 999999;
+  }
+  
+  .heo-aea h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .heo-aea p {
+    font-size: 20px;
+    line-height: 32px;
+    color: #f9f9f9;
+  }
+  .heoSlideArrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #981D97;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 999;
+  }
+  
+  .heoSlideArrow:focus, .heoSlideArrow:hover {
+    background-color: #FFA300;
+    color: #fff;
+    outline: 0;
+  }
+  
+  .heoSlideArrow.prevArrow {
+    left: 20px;
+  }
+  
+  .heoSlideArrow.nextArrow {
+    right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .heoSlideArrow {
+      display: none !important;
+    }
+  }
