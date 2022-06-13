@@ -3,7 +3,7 @@
 			<!-- Slider -->
 		<div class="main_slider heo-slide">
 			<!-- slider1 -->
-			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/slider.png);">
+			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/landing-1.png);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-center">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<!-- slider2 -->
-			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/vet.jpg);">
+			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/slider.png);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-left">
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<!-- slider3 -->
-			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/slideracc.jpg);">
+			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/vet.jpg);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-right">
@@ -45,7 +45,7 @@
 			</div>
 			<!-- slider4 -->
 			<div class="slide-itm th-fullpage heo-aea"
-				style="background-image: url(assets/images/slider/slidernewest22.jpg);">
+				style="background-image: url(assets/images/slider-2.png);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-right">
@@ -60,7 +60,7 @@
 			</div>
 			<!-- slider5 -->
 			<div class="slide-itm th-fullpage heo-aea"
-				style="background-image: url(assets/images/slider/petstore-slider.jpg);">
+				style="background-image: url(assets/images/landing-5.png);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-right">
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<!-- slider6 -->
-			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/slider/slide8.jpg);">
+			<div class="slide-itm th-fullpage heo-aea" style="background-image: url(assets/images/landing-1.png);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 text-right">
@@ -138,7 +138,7 @@
 			</div>
 		</div>
 
-		<!-- categories -->
+		<!-- pets -->
 		<div class="benefit">
 			<div class="container">
 				<div class="row">
@@ -153,27 +153,27 @@
 						<div class="product_slider_container">
 							<div class="owl-carousel owl-theme product_slider">
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/small1.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h2 class="text-center text-secondary">Dog</h2>
+									<img src="<?= base_url('assets/images/gsd.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<h4 class="text-center text-secondary">Dog</h4>
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/small1.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h2 class="text-center text-secondary">Cat</h2>
+									<img src="<?= base_url('assets/images/cat.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<h4 class="text-center text-secondary">Cat</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/small1.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h2 class="text-center text-secondary">Rabbit</h2>
+									<img src="<?= base_url('assets/images/hamster.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<h4 class="text-center text-secondary">Hamster</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/small1.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h2 class="text-center text-secondary">Fish</h2>
+									<img src="<?= base_url('assets/images/goldfish.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<h4 class="text-center text-secondary">Fish</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/small1.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h2 class="text-center text-secondary">Bird</h2>
+									<img src="<?= base_url('assets/images/parrot.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<h4 class="text-center text-secondary">Bird</h4>
 
 								</div>
 							</div>
@@ -213,7 +213,7 @@
 								<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center"
 									data-filter=".accessories"> pet accessories</li>
 								<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center"
-									data-filter=".men">Pet Toys & Essentials</li>
+									data-filter=".men">Pet Toys</li>
 							</ul>
 						</div>
 					</div>
@@ -222,196 +222,27 @@
 					<div class="col">
 						<div class="product-grid"
 							data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+							<?php foreach ($products as $row):?>
 
-							<!-- Product 1 -->
-
-							<div class="product-item women">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
+								<!-- Product 1 -->
+								<div class="product-item women">
+									<div class="product product_filter">
+										<div class="product_image">
+											<img src="<?php echo base_url(''.$row['image']);?>" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div
+											class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center">
+											<span>new</span>
+										</div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html"><?php echo $row["name"]; ?></a></h6>
+											<div class="product_price"><?php echo 'KES '.$row["price"]; ?></div>
+										</div>
 									</div>
-									<div class="favorite"></div>
-									<div
-										class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center">
-										<span>new</span>
-									</div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved
-												27-Inch FHD Monitor</a></h6>
-										<div class="product_price">$610.00</div>
-									</div>
+									<div class="red_button add_to_cart_button"><a href="<?php echo base_url('products/addToCart/'.$row['id']); ?>">add to order</a></div>
 								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 2 -->
-
-							<div class="product-item women">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div
-										class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center">
-										<span>new</span>
-									</div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved
-												27-Inch FHD Monitor</a></h6>
-										<div class="product_price">$610.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 3 -->
-
-							<div class="product-item women">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout
-												Edition</a></h6>
-										<div class="product_price">$120.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 4 -->
-
-							<div class="product-item accessories">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div
-										class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
-										<span>sale</span>
-									</div>
-									<div class="favorite favorite_left"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo
-												Thermal Label Printer</a></h6>
-										<div class="product_price">$410.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 5 -->
-
-							<div class="product-item women men">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold &
-												Grey</a></h6>
-										<div class="product_price">$180.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 6 -->
-
-							<div class="product-item accessories">
-								<div class="product discount product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite favorite_left"></div>
-									<div
-										class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
-										<span>-$20</span>
-									</div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="#single.html">Fujifilm X100T 16 MP Digital
-												Camera (Silver)</a></h6>
-										<div class="product_price">$520.00<span>$590.00</span></div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 7 -->
-
-							<div class="product-item women">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved
-												27-Inch FHD Monitor</a></h6>
-										<div class="product_price">$610.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 8 -->
-
-							<div class="product-item accessories">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout
-												Edition</a></h6>
-										<div class="product_price">$120.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 9 -->
-
-							<div class="product-item men">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div
-										class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
-										<span>sale</span>
-									</div>
-									<div class="favorite favorite_left"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo
-												Thermal Label Printer</a></h6>
-										<div class="product_price">$410.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
-
-							<!-- Product 10 -->
-
-							<div class="product-item men">
-								<div class="product product_filter">
-									<div class="product_image">
-										<img src="<?= base_url();?>assets/images/products/Bonnie-Beef-Adult-Dog-Food-Kenya.jpg" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="product_info">
-										<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold &
-												Grey</a></h6>
-										<div class="product_price">$180.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to order</a></div>
-							</div>
+							<?php  endforeach;?>
 						</div>
 					</div>
 				</div>
@@ -440,7 +271,9 @@
 										<div class="product-item">
 											<div class="product discount">
 												<div class="product_image">
+												<a href="<?= base_url('products/product_view/'. $row['id']); ?>">
 													<img src="<?= base_url(''.$row['image']);?>" alt="">
+												</a>
 												</div>
 												<div class="favorite favorite_left"></div>
 												<!-- <div
@@ -479,7 +312,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<div class="deal_ofthe_week_img">
-							<img src="" alt="">
+							<!-- <img src="<?= base_url('assets/images/german-shepher.jpg');?>" alt=""> -->
 						</div>
 					</div>
 					<div class="col-lg-6 text-right deal_ofthe_week_col">
@@ -505,7 +338,7 @@
 									<div class="timer_unit">Sec</div>
 								</li>
 							</ul>
-							<div class="red_button deal_ofthe_week_button"><a href="#">shop now</a></div>
+							<div class="red_button shop_now_button text-white"><a href="#">shop now</a></div>
 						</div>
 					</div>
 				</div>
@@ -533,24 +366,24 @@
 									<div class="owl-item product_slider_item">
 										<div class="product-item">
 											<div class="product discount">
-												<div class="product_image">
+												<div class="product_image" id="image">
+												<a href="<?= base_url('products/product_view/'. $row['id']); ?>">
 													<img src="<?= base_url(''.$row['image']);?>" alt="">
+												</a>
 												</div>
 												<div class="favorite favorite_left"></div>
-												<!-- <div
-													class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
-													<span>-$20</span>
-												</div> -->
 												<div class="product_info">
-													<h6 class="product_name"><a href="<?= base_url('products/product_view/'. $row['id']); ?>"><?php echo $row["name"]; ?></a></h6>
-													<div class="product_price"><?php echo 'KES '.$row["price"]; ?></div>
+													<h6 class="product_name" id="name"><a href="<?= base_url('products/product_view/'. $row['id']); ?>"><?php echo $row["name"]; ?></a></h6>
+													<div class="product_price" id="price"><?php echo 'KES '.$row["price"]; ?></div>
 												</div>
 											</div>
 										</div>
 									</div>
 								<?php  endforeach;?>
 							</div>
+
 							<!-- Slider Navigation -->
+
 							<div
 								class="product_slider_nav_left product_slider_nav d-flex align-items-center justify-content-center flex-column">
 								<i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -571,7 +404,7 @@
 				<div class="row">
 					<div class="col text-center">
 						<div class="section_title">
-							<h2>Penzipet Services</h2>
+							<h2>Penzipet News</h2>
 						</div>
 					</div>
 				</div>
@@ -581,9 +414,9 @@
 							<div class="blog_background" style="background-image:url(assets/images/small2.jpg)"></div>
 							<div
 								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">Here are the trends I see coming this fall</h4>
-								<span class="blog_meta">by admin | dec 01, 2017</span>
-								<a class="blog_more" href="#">Read more</a>
+								<h4 class="blog_title">more products Soon to come</h4>
+								<span class="blog_meta">by Penzipet </span>
+								<!-- <a class="blog_more" href="#">Read more</a> -->
 							</div>
 						</div>
 					</div>
@@ -593,9 +426,9 @@
 							<div class="blog_background"style="background-image:url(assets/images/small1.jpg); object-fit: contain;"></div>
 							<div
 								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">Here are the trends I see coming this fall</h4>
-								<span class="blog_meta">by admin | dec 01, 2017</span>
-								<a class="blog_more" href="#">Read more</a>
+								<h4 class="blog_title">more products Soon to come</h4>
+								<span class="blog_meta">by Penzipet </span>
+								<!-- <a class="blog_more" href="#">Read more</a> -->
 							</div>
 						</div>
 					</div>
@@ -605,9 +438,9 @@
 							<div class="blog_background" style="background-image:url(assets/images/small2.jpg)"></div>
 							<div
 								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">Here are the trends I see coming this fall</h4>
-								<span class="blog_meta">by admin | dec 01, 2017</span>
-								<a class="blog_more" href="#">Read more</a>
+								<h4 class="blog_title">more products Soon to come</h4>
+								<span class="blog_meta">by Penzipet </span>
+								<!-- <a class="blog_more" href="#">Read more</a> -->
 							</div>
 						</div>
 					</div>
