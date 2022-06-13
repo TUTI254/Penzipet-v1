@@ -8,11 +8,11 @@
 							class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
 							<ul class="footer_nav">
 								<!-- <li><a href="#">Blog</a></li> -->
-								<!-- <li><a href="#">FAQs</a></li> -->
-								<li><a href="contact.html">Contact us</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="#">Contact us</a></li>
 							</ul>
 						</div>
-					</div>
+						</div>
 					<div class="col-lg-6">
 						<div
 							class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
@@ -35,24 +35,11 @@
 				</div>
 			</div>
 		</footer>
-
-		<!-- START Bootstrap-Cookie-Alert -->
-		<div class="alert text-center cookiealert" role="alert">
-			<b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website.
-			<a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
-
-			<button type="button" class="btn btn-primary btn-sm acceptcookies">
-				I agree
-			</button>
-		</div>
-		<!-- END Bootstrap-Cookie-Alert -->
-
 	</div>
 
 	<script src="<?= base_url();?>assets/js/jquery-3.2.1.min.js"></script>
 	<script src="<?= base_url();?>assets/styles/bootstrap4/popper.js"></script>
 	<script src="<?= base_url();?>assets/styles/bootstrap4/bootstrap.min.js"></script>
-	<!-- <script src="<?= base_url();?>assets/js/cookiealert.js"></script> -->
 	<script src="<?= base_url();?>assets/plugins/Isotope/isotope.pkgd.min.js"></script>
 	<script src="<?= base_url();?>assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 	<script src="<?= base_url();?>assets/plugins/easing/easing.js"></script>
@@ -60,6 +47,10 @@
 	<script src="<?= base_url();?>assets/js/newsletter.js"></script>
 	<script src="<?= base_url();?>assets/js/auths.js"></script>
 	<script src="<?= base_url();?>assets/js/search.js"></script>
+	<script src="<?= base_url();?>plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+	<!-- <script src="<?= base_url();?>assets/js/cart.js"></script>	 -->
+	<!-- <script src="<?= base_url();?>js/categories_custom.js"></script> -->
+	
 	<!-- slick Carousel -->
 	<script src="<?= base_url();?>assets/js/toastr.min.js"></script>
 	<script src="<?= base_url();?>assets/js/slick.min.js"></script>
@@ -78,6 +69,56 @@
 			pauseOnHover: false
 		});
 		$('.heo-slide').slickAnimation();
+
+	</script>
+	<script>
+		// Remove from cart
+		function removeFromCart(id) {
+			$.ajax({
+				url:'products/remove_item_from_cart/' + id,
+				type: "GET",
+				dataType: "JSON",
+				success: function(data) {
+					if (data.response == 'success') {
+						cartData()
+						Command: toastr["success"](data.message)
+						
+					} else if (data.response == 'error') {
+						Command: toastr["error"](data.message)
+					}
+				}
+			})
+		}
+
+
+		// Function to decrement cart items
+		function decrementCartItems(id) {
+			$.get('products/decrement_cart_items/' + id, function(response) {
+				const data = JSON.parse(response)
+				if (data.response == 'success') {
+					cartData()
+					
+					Command: toastr["success"](data.message)
+				} else if (data.response == 'error') {
+				
+					Command: toastr["error"](data.message)
+				}
+			})
+		}
+
+		// Function to Increment cart Items
+		function incrementCartItem(id) {
+			$.get('products/increment_cart_items/' + id, function(response) {
+				const data = JSON.parse(response)
+				if (data.response == 'success') {
+					cartData()
+					Command: toastr["success"](data.message)
+				} else if (data.response == 'error') {
+					Command: toastr["error"](data.message)
+				}
+			})
+		}
+
 
 	</script>
 </body>
