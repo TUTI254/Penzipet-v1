@@ -1,110 +1,53 @@
-     <!-- checkout view  -->
-	 <div class="new_arrivals">
-        <div class=" container">
+<!--  cart view-->
+	<div class="benefit" style="margin-top: 150px!important;">
+        <div class="container">
             <div class="d-flex justify-content-center row">
-                <div class="col-md-12">
-                    <div class="card shadow-lg mt-5">
-                        <div class="row justify-content-around mt-5">
-                            <div class="col-md-6" style="margin-top: 120px;">
-                                <div class="card border-0">
-                                    <div class="card-header pb-0">
-                                        <h2 class="card-title space">Checkout</h2>
-                                        <p class="card-text text-muted mt-4  space">SHIPPING DETAILS</p>
-                                        <hr class="my-0">
-                                    </div>
-									<form  class="checkout-form" action="<?= base_url('products/checkout_user');?>"method="post" id="placeOrder">
-										<?php if($custData):$custData = $this->db->get_where('customers', array('id' => $this->session->userdata('user_id')))->row();?>
-										<?php endif; ?>
-
-										<div class="card-body">
-											<div class="row no-gutters">
-												<div class="col-sm-6 pr-sm-2">
-													<div class="form-group">
-														<label for="NAME" class="small text-muted mb-1">First Name</label>
-														<input type="text" class="form-control form-control-sm"id="firstname" name="firstname" <?php if($custData):?> value="<?= $custData->firstname ?>"<?php else:?>value=""<?php endif; ?> autocomplete="off">
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label for="NAME" class="small text-muted mb-1">Last Name</label>
-														<input type="text" class="form-control form-control-sm"id="lastname" name="lastname"  <?php if($custData):?> value="<?= $custData->lastname ?>"<?php else:?>value=""<?php endif; ?> autocomplete="off">
-													</div>
-												</div>
-											</div>
-											<div class="row no-gutters">
-												<div class="col-sm-6 pr-sm-2">
-													<div class="form-group">
-														<label for="NAME" class="small text-muted mb-1">Email</label>
-														<input type="text" class="form-control form-control-sm" id="email" name="email" <?php if($custData):?> value="<?= $custData->email ?>"
-													<?php else:?>value=""<?php endif; ?> autocomplete="off">
-													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label for="NAME" class="small text-muted mb-1">Phone Number</label>
-														<input type="text" class="form-control form-control-sm" id="phone"  name="phone" <?php if($custData):?> value="<?= $custData->phone ?>"<?php else:?>value=""<?php endif; ?> autocomplete="off">
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<label for="NAME" class="small text-muted mb-1">Shipping Address</label>
-												<input type="text" class="form-control form-control-sm"  id="address"name="address" <?php if($custData):?> value="<?= $custData->address ?>"<?php else:?>value=""<?php endif; ?> autocomplete="off">
-													<small class="text-muted">please enter your exact location for Shipping</small>
-											</div>
-											<div class="row mb-md-5">
-												<div class="col">
-													<button type=""class="red_button text-white p-3" name="placeOrder" >Place Order</button>
-												</div>
-											</div>    
-										</div>
-									</form>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-15 "style="margin-top: 120px;">
-                                <div class="card border-0">
-                                    <div class="card-header card-2">
-                                        <p class="card-text text-muted mt-md-4  mb-2 space">Your Order Summary</p>
-                                    </div>
-                                    <div class="card-body checkoutscroll pt-0">
-										<?php if($this->cart->total_items() > 0){foreach($cartItems  as$cart){?>
-                                        <div class="row  justify-content-between">
-                                            <div class="col-auto col-md-7">
-                                                <div class="media flex-column flex-sm-row">
-                                                    <img class=" img-fluid" src="<?php echo base_url(''.$cart['image']);?>" width="100" height="100">
-                                                    <div class="media-body  my-auto">
-                                                        <div class="row ">
-                                                            <div class="col-auto"><p class="mb-0"><b><?= $cart['name']?></b></p></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" pl-0 flex-sm-col col-auto  my-auto"> <p class="boxed-1"><?= $cart['qty'] ?></p></div>
-                                            <div class=" pl-0 flex-sm-col col-auto  my-auto "><p><b><?= 'KES '.number_format($cart['price']); ?></b></p></div>
-                                        </div>
-                                        <hr class="my-2">
-                                        <div class="row ">
-                                            <div class="col">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-4"><p class="mb-1"><b>Subtotal</b></p></div>
-                                                    <div class="flex-sm-col col-auto"><p class="mb-1"><b><?= 'KES '.number_format($cart['subtotal']); ?></b></p></div>
-                                                </div>
-                                                <div class="row justify-content-between">
-                                                    <div class="col"><p class="mb-1"><b>Shipping</b></p></div>
-                                                    <div class="flex-sm-col col-auto"><p class="mb-1"><b></b></p></div>
-                                                </div>
-                                                <div class="row justify-content-between">
-                                                    <div class="col-4"><p ><b>Total</b></p></div>
-                                                    <div class="flex-sm-col col-auto"><p  class="mb-1"><b><?php echo 'KES'.$this->cart->total(); ?></b></p> </div>
-                                                </div><hr class="my-0">
-                                            </div>
-                                        </div>
-										<?php } } ?>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-md-9">
+                    <div class="col text-center">
+                        <div class="section_title new_arrivals_title">
+                            <h2 class="mt-5">Shopping Cart</h2>
                         </div>
                     </div>
+					<?php if($this->cart->total() != 0):?>
+
+						<form action="" id="loadcart">
+							<?php foreach($cartItems as $cart):?>
+								<div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded" id="cartdata">
+									<div class="mr-1"><img class="rounded" src="<?php echo base_url(''.$cart['image']);?>" width="80"></div>
+									<div class="d-flex flex-column align-items-left product-details"><span class="font-weight-bold font-size-8px"><?= $cart['name']?></span>
+									</div>
+									<div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger mr-3" onclick="decrementCartItems(<?php echo' \''.$cart['rowid'].'\'' ?>)"></i>
+										<h5 class="text-grey mt-1"><?= $cart['qty'] ?></h5><i class="fa fa-plus text-success ml-3" onclick="incrementCartItem(<?php echo' \''.$cart['rowid'].'\'' ?>)"></i>
+									</div>
+									<div>
+										<h5 class="text-grey ml-2 mr-1"><?= 'KES '.number_format($cart['price']); ?></h5>
+									</div>
+									<div class="d-flex align-items-center">
+									<?php echo '<i onclick="removeFromCart(\''.$cart['rowid'].'\')" class="fa fa-trash remove"></i>'?>
+									</div>
+
+								</div> 
+								<hr>
+								<!-- <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><input type="text" class="form-control border-0 gift-card" placeholder="discount code/gift card"><button class="btn btn-outline-warning btn-sm ml-2" type="button">Apply</button></div> -->
+								<?php endforeach ;?>
+									<div class="d-flex flex-row align-items-center mt-3">
+										<a href="<?=base_url('shop');?>" class="red_button text-white p-3 ml-3">continue shopping</a>
+										<a href="<?=base_url('checkout');?>" class="red_button text-white p-3 ml-3">Proceed to checkout</a>
+									
+									</div>
+						</form>
+                    
+					<?php else: ?>
+						<div class="container mt-3">
+							<div class="col-lg-12">
+								<h4 class="mt-5">Your cart is empty....</h4>
+								<img src="<?= base_url(); ?>assets/images/cart.svg" width="400px" alt="">
+								<a href="<?=base_url('shop');?>" class="red_button text-white p-3 ml-3 mt-3">Start shopping</a>
+							</div>
+						</div>
+
+					<?php endif; ?>
+                    
                 </div>
             </div>
         </div>
