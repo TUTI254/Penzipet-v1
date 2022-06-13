@@ -11,91 +11,56 @@ class Products extends CI_Controller {
     public function index()
     {
 		
-		$data['title'] = 'Penzi shop';
+		$data['title'] = 'PenziPet shop';
 		$data['products']= $this->product_model->getRows();
         $data['cartItems'] = $this->cart->contents();
 		$this->load->view('common/header',$data); 		// Load the  header view
-        $this->load->view('main/shop',$data);       // Load the product shop view 
-		if(array_key_exists('recentviewed', $_COOKIE))
-		{
-			$cookie_get=get_cookie('recentviewed');
-			$cookies=unserialize($cookie_get);
-			$productids=implode("','", $cookies);
-			$where= "id IN ('$productids')";
-			$recentviewedlist=$this->product_model->productListWithId($where);
-			$this->load->view('recentviewed',['recentviewedlist'=>$recentviewedlist]);
-		}
-		$this->load->view('common/footer',$data);		// Load the footer view
-    }
-	public function product_view()
-    {
-		$product_id = $this->uri->segment(3);
-		$data ['productdata'] = $this->product_model->productView($product_id);
-		if(array_key_exists('recentviewed',$_COOKIE)){
-			
-			$cookie_get=get_cookie('recentviewed');
-			$cookies =unserialize(cookie_get);
-			// check if product is already loaded
-			if(!in_array($product_id,$cookies)){
-				$cookies[]=$product_id;
-			}
-			delete_cookie('recentviewed');
-
-			// set cookie against
-			$cookievalue=serialize($cookies);
-			$cookiearr=array(
-				'name' => 'recentviewed',
-				'value' => $cookievalue,
-				'expires' =>'86400'
-			);
-			$this->input->set_cookie($cookiearr);
-		}else{
-			$cookie_data[]= $product_id;
-			$cookievalue=serialize($cookie_data);
-			$cookiearr=array(
-				'name' => 'recentviewed',
-				'value' => $cookievalue,
-				'expires' =>'86400'
-			);
-			$this->input->set_cookie($cookiearr);
-		}
-		$data['title'] = 'Penzi shop';
-        $data['cartItems'] = $this->cart->contents();	
-		$this->load->view('common/header',$data); 		// Load the  header view
-        $this->load->view('main/product_view',$data);       // Load the product  view 
+        $this->load->view('main/shop',$data);// Load the product shop view 
 		$this->load->view('common/footer',$data);		// Load the footer view
     }
 
-	public function cart(){
-
-		$data['title'] = 'My cart';
+	public function productView()
+	{
+		$product_id = $this-> uri-> segment(3) ;
+		$data['title'] = 'PenziPet shop';
+		$data['products']= $this->product_model->getRows();
         $data['cartItems'] = $this->cart->contents();
-		$this->load->view('common/header',$data); 		// Load the  header view
-        $this->load->view('pages/cart',$data);       // Load the product shop view 
-		$this->load->view('common/footer',$data);		// Load the footer view
-
+		$data['productData'] = $this->product_model->productView($product_id);
+		$this->load->view('head');
+		$this->load->view('main/product_view',$data);
+		$this->load->view ('footer');
 	}
-
 	public function addToCart($proID){
+        
         // Fetch specific product by ID
         $product = $this->product_model->getRows($proID);
-			// Add product to the cart
+        // Add product to the cart
 			$data = array(
 				'id'    => $product['id'],
-				'qty'   => 1,
-				'price' => $product['price'],
-				'name'  => $product['name'],
+				'qty'    => 1,	
+				'price'    => $product['price'],
+				'name'    => $product['name'],
 				'image' => $product['image']
 			);
 			if ($this->cart->insert($data)) {
-				$this->session->set_flashdata ('success', 'Product successfully added to cart');
+				// $message = array('response' => 'success', 'message' => $product['name'].' added to cart');
 				redirect('cart');
-			}else{
-				$this->session->set_flashdata('error','Something went wrong | try again later.');
+			} else {
+				// $message = array('response' => 'warning', 'message' => 'Something went | try again later');
 			}
+		
+        // echo json_encode($message);
     }
 
-
+	public function cart(){
+		$data['title'] = 'PenziPet Cart';
+        $data = array();
+        // Retrieve cart data from the session
+        $data['cartItems'] = $this->cart->contents();
+		$this->load->view('common/header',$data); 		// Load the  header view
+        $this->load->view('pages/cart', $data);  // Load the cart view
+		$this->load->view('common/footer',$data);		// Load the footer view
+    }
 	// Function for removing item from cart
 	public function remove_item_from_cart($row_id)
 	{
@@ -149,7 +114,7 @@ class Products extends CI_Controller {
     {
         if ($this->session->userdata('user_login') != 1) {
             $this->session->set_userdata('redirect-url', base_url('checkout'));
-            redirect('login');
+            redirect('account_login');
         }else{
             if($this->cart->total() > 0){
 				$data['title'] = 'Checkout Page';// Retrieve cart data from the session
