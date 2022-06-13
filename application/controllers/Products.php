@@ -52,11 +52,9 @@ class Products extends CI_Controller {
         // echo json_encode($message);
     }
 
-	public function cart(){
+public function cart(){
 		$data['title'] = 'PenziPet Cart';
-        $data = array();
-        // Retrieve cart data from the session
-        $data['cartItems'] = $this->cart->contents();
+        $data['cartItems'] = $this->cart->contents(); // Retrieve cart data from the session
 		$this->load->view('common/header',$data); 		// Load the  header view
         $this->load->view('pages/cart', $data);  // Load the cart view
 		$this->load->view('common/footer',$data);		// Load the footer view
