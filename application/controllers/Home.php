@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	public function index()
-	{	$data['title'] = ' Welcome to Penzi pet store';
+	{	$data['title'] = ' Welcome to PenziPet';
 		$data['cartItems'] = $this->cart->contents();
 		$data['products']= $this->product_model->getRows();
 		// $data['trendy'] = $this->product_model->getTrend();
