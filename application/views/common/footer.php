@@ -58,7 +58,7 @@
 	<script>
 		//Hero Slider
 		$('.heo-slide').slick({
-			// autoplay: true,
+			autoplay: true,
 			infinite: true,
 			arrows: true,
 			prevArrow: '<button type=\'button\' class=\'heoSlideArrow prevArrow fa fa-chevron-left\'></button>',
