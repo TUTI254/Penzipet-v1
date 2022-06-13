@@ -20,6 +20,13 @@ class Product_model extends CI_Model{
             }
         }
     }
+    public function productList(){
+		$this->db->select('*');
+		$this->db->where('status', '1');
+		$qry=$this->db->get('products');
+		return $qry->result();
+
+	}
 	public function productView($id){
 		$this->db->select('*');
 		$this->db->where('id',$id);
@@ -29,15 +36,6 @@ class Product_model extends CI_Model{
 
 	}
 
-	public function getTrendy($id){
-		$this->db->select('*');
-		$this->db->where('id',$id);
-		$this->db->where('status', '1');
-		$this->db->where('trendy', '1');
-		$gry=$this->db->get('products');
-		return $gry->row();
-
-	}
 
 	public function productListWithId($where){
 		$this->db->select('*');
