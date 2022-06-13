@@ -80,11 +80,16 @@
 				dataType: "JSON",
 				success: function(data) {
 					if (data.response == 'success') {
-						cartData()
 						Command: toastr["success"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 						
 					} else if (data.response == 'error') {
 						Command: toastr["error"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 					}
 				}
 			})
@@ -96,12 +101,15 @@
 			$.get('products/decrement_cart_items/' + id, function(response) {
 				const data = JSON.parse(response)
 				if (data.response == 'success') {
-					cartData()
-					
 					Command: toastr["success"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 				} else if (data.response == 'error') {
-				
 					Command: toastr["error"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 				}
 			})
 		}
@@ -111,10 +119,15 @@
 			$.get('products/increment_cart_items/' + id, function(response) {
 				const data = JSON.parse(response)
 				if (data.response == 'success') {
-					cartData()
 					Command: toastr["success"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 				} else if (data.response == 'error') {
 					Command: toastr["error"](data.message)
+						setTimeout(function () {
+                        window.location.reload();
+                    }, 1000)
 				}
 			})
 		}
