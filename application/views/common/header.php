@@ -18,6 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/styles/slider.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/styles/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/styles/categories_styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="<?= base_url() ;?>assets/styles/categories_responsive.css"> -->
 	<!-- Slick Carousel -->
 	<link rel="stylesheet" href="<?= base_url() ;?>assets/styles/slick.css">
 	<link rel="stylesheet" href="<?= base_url() ;?>assets/styles/slick-theme.css">
@@ -115,7 +118,7 @@
 								<ul class="navbar_menu">
 									<li><a href="<?php echo base_url('');?>">home</a></li>
 									<li><a href="<?php echo base_url('shop');?>">shop</a></li>
-									<li><a href="contact.html">contact</a></li>
+									<!-- <li><a href="contact.html">contact</a></li> -->
 								</ul>
 								<ul class="navbar_user">
 									<li><a href="#"></a></li>
@@ -174,13 +177,19 @@
 							<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="menu_selection">
-							<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-							<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+							<?php if($this->session->userdata('user_login') == 1):?>
+								<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>My Profile</li>							
+								<li><a href="<?php echo base_url('auths/logout');?>"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
+								<?php else: ?>							
+								<li><a href="<?php echo base_url('account_login');?>"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
+								<li><a href="<?php echo base_url('Customer_registration');?>"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+							<?php endif;?>
 						</ul>
 					</li>
-					<li class="menu_item"><a href="#">home</a></li>
-					<li class="menu_item"><a href="#">shop</a></li>
+					<li class="menu_item"><a href="<?php echo base_url('');?>">home</a></li>
+					<li class="menu_item"><a href="<?php echo base_url('shop');?>">shop</a></li>
 					<li class="menu_item"><a href="#">contact</a></li>
+					<li class="menu_item"><a href="#">Faq's</a></li>
 				</ul>
 			</div>
 		</div>
