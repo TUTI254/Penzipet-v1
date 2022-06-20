@@ -23,7 +23,7 @@
 			<div class="container" style="margin-top: 180px !important;">		
 				<div class="row">
 					<div class="col">
-						<? php $this->load->view('main/search_results', $products);?>
+						<?php $this->load->view('main/search_results', $products)?>
 					</div>
 				</div>
 			</div>
