@@ -1,6 +1,6 @@
 <!-- New Arrivals -->
 		<div class="new_arrivals">
-			<div class="container" style="margin-top: 120px;">		
+			<div class="container" style="margin-top: 120px !important;">		
 				<div class="row">
 					<div class="col">
 						<div class="section_title new_arrivals_title">
