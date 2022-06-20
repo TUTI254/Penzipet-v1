@@ -30,7 +30,7 @@
 		</div>
 <?php else: ?>
 
-	<div class="newsletter" style="margin-top: 180px !important;">
+	<div class="newsletter" style="margin-top: 120px !important;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
