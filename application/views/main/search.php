@@ -24,10 +24,9 @@
 		<div class="products_iso">
 			<div class="row">
 				<div class="col">
-						<!-- Product Grid -->
-					<div class="product-grid">
+					
 						<?php $this->load->view('main/search_results', $products)?>	
-					</div>
+					
 				</div>
 			</div>
 		</div>
