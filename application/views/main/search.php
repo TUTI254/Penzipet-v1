@@ -19,19 +19,15 @@
 	</div>
 
 	<!-- Main Content -->
-	<div class="main_content">
-		<!-- Products -->
-		<div class="products_iso">
-			<div class="row">
-				<div class="col">
-					
-						<?php $this->load->view('main/search_results', $products)?>	
-					
+	<div class="new_arrivals">
+			<div class="container" style="margin-top: 180px !important;">		
+				<div class="row">
+					<div class="col">
+						<? php $this->load->view('main/search_results', $products);?>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 <?php else: ?>
 
 	<div class="newsletter" style="margin-top: 180px !important;">
