@@ -188,8 +188,8 @@
 					</li>
 					<li class="menu_item"><a href="<?php echo base_url('');?>">home</a></li>
 					<li class="menu_item"><a href="<?php echo base_url('shop');?>">shop</a></li>
-					<li class="menu_item"><a href="#">contact</a></li>
-					<li class="menu_item"><a href="#">Faq's</a></li>
+				   <!-- <li class="menu_item"><a href="#">contact</a></li>
+					<li class="menu_item"><a href="#">Faq's</a></li> -->
 				</ul>
 			</div>
 		</div>
