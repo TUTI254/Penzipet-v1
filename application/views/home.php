@@ -11,7 +11,7 @@
 							<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">We
 								Deliver<br>right to Your Doorstep.</h1>
 							<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8"
-								class="red_button shop_now_button text-white" href="">Shop Now</a>
+								class="red_button shop_now_button text-white" href="<?= base_url('shop');?>">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 							<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Find What<br>your
 								Pet needs.</h1>
 							<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8"
-								class="red_button shop_now_button text-white" href="">Shop Now</a>
+								class="red_button shop_now_button text-white" href="<?= base_url('shop');?>">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 							<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Get the best
 								products <br> at the best rates.</h1>
 							<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8"
-								class="red_button shop_now_button text-white" href="shop.html">Shop Now</a>
+								class="red_button shop_now_button text-white" href="<?= base_url('shop');?>">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 								<br>1# Online Supermarket’.
 							</h1>
 							<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8"
-								class="red_button shop_now_button text-white" href="shop.html">Shop Now</a>
+								class="red_button shop_now_button text-white" href="<?= base_url('shop');?>">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 							<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Need Tips on
 								raising a pet? <br> feel free to ask us .</h1>
 							<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8"
-							all	class="red_button shop_now_button text-white" href="shop.html">Vist FAQ's</a>
+							all	class="red_button shop_now_button text-white" href="#">Vist FAQ's</a>
 						</div>
 					</div>
 				</div>
