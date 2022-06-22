@@ -153,26 +153,26 @@
 						<div class="product_slider_container">
 							<div class="owl-carousel owl-theme product_slider">
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/gsd.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<img src="<?= base_url('assets/icons8-corgi.gif');?>" alt="Dog" style="width:80px;>
 									<h4 class="text-center text-secondary">Dog</h4>
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/cat.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<img src="<?= base_url('assets/icons8-cat.gif');?>" alt="Cat" style="width:80px;>
 									<h4 class="text-center text-secondary">Cat</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/hamster.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
-									<h4 class="text-center text-secondary">Hamster</h4>
+									<img src="<?= base_url('assets/icons8-rabbit.gif');?>" alt="Rabbit" style="width:80px;">
+									<h4 class="text-center text-secondary">Rabbit</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/goldfish.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<img src="<?= base_url('assets/icons8-top-view-fish.gif');?>" alt="Fish" style="width:80px;>
 									<h4 class="text-center text-secondary">Fish</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/images/parrot.jpg');?>" alt="Dog" style="width:120px; height: 120px; border-radius: 50%;">
+									<img src="<?= base_url('assets/icons8-bird.gif');?>" alt="Dog" style="width:80px;>
 									<h4 class="text-center text-secondary">Bird</h4>
 
 								</div>
@@ -398,57 +398,7 @@
 			</div>
 		</div>
 
-		<!-- Blogs -->
-		<div class="blogs">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<div class="section_title">
-							<h2>Penzipet News</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row blogs_container">
-					<div class="col-lg-4 blog_item_col">
-						<div class="blog_item">
-							<div class="blog_background" style="background-image:url(assets/images/small2.jpg)"></div>
-							<div
-								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">more products Soon to come</h4>
-								<span class="blog_meta">by Penzipet </span>
-								<!-- <a class="blog_more" href="#">Read more</a> -->
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 blog_item_col">
-						<div class="blog_item">
-							<div class="blog_background"style="background-image:url(assets/images/small1.jpg); object-fit: contain;"></div>
-							<div
-								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">more products Soon to come</h4>
-								<span class="blog_meta">by Penzipet </span>
-								<!-- <a class="blog_more" href="#">Read more</a> -->
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 blog_item_col">
-						<div class="blog_item">
-							<div class="blog_background" style="background-image:url(assets/images/small2.jpg)"></div>
-							<div
-								class="blog_content d-flex flex-column align-items-center justify-content-center text-center">
-								<h4 class="blog_title">more products Soon to come</h4>
-								<span class="blog_meta">by Penzipet </span>
-								<!-- <a class="blog_more" href="#">Read more</a> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Newsletter -->
+				<!-- Newsletter -->
 		<div class="newsletter">
 			<div class="container">
 				<div class="row">
