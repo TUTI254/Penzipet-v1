@@ -153,11 +153,11 @@
 						<div class="product_slider_container">
 							<div class="owl-carousel owl-theme product_slider">
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/icons8-corgi.gif');?>" alt="Dog" style="width:80px;>
+									<img src="<?= base_url('assets/icons8-corgi.gif');?>" alt="Dog" style="width:80px;">
 									<h4 class="text-center text-secondary">Dog</h4>
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/icons8-cat.gif');?>" alt="Cat" style="width:80px;>
+									<img src="<?= base_url('assets/icons8-cat.gif');?>" alt="Cat" style="width:80px;">
 									<h4 class="text-center text-secondary">Cat</h4>
 
 								</div>
@@ -167,12 +167,12 @@
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/icons8-top-view-fish.gif');?>" alt="Fish" style="width:80px;>
+									<img src="<?= base_url('assets/icons8-top-view-fish.gif');?>" alt="Fish" style="width:80px;">
 									<h4 class="text-center text-secondary">Fish</h4>
 
 								</div>
 								<div class="owl-item product_slider_item">
-									<img src="<?= base_url('assets/icons8-bird.gif');?>" alt="Dog" style="width:80px;>
+									<img src="<?= base_url('assets/icons8-bird.gif');?>" alt="Dog" style="width:80px;">
 									<h4 class="text-center text-secondary">Bird</h4>
 
 								</div>
