@@ -19,16 +19,20 @@ class Products extends CI_Controller {
 		$this->load->view('common/footer',$data);		// Load the footer view
     }
 
-	public function productView()
-	{
-		$product_id = $this-> uri-> segment(3) ;
-		$data['title'] = 'PenziPet shop';
-		$data['products']= $this->product_model->getRows();
+	public function getProductdetails(string $slug){
+		$data['title'] = 'Product View';
         $data['cartItems'] = $this->cart->contents();
-		$data['productData'] = $this->product_model->productView($product_id);
-		$this->load->view('head');
-		$this->load->view('main/product_view',$data);
-		$this->load->view ('footer');
+        $output = $this->product_model->getProductDetails($slug, '$slug');
+        if($output){
+            $data['product'] = $output;
+            $this->load->view('common/header',$data);
+            $this->load->view('main/product_view');
+            $this->load->view('common/footer');
+        }else{
+            $data['heading'] = '404 Page Not Found';
+            $data['message'] = 'The page you requested was not found.';
+            $this->load->view('errors/html/error_404',$data);
+        }
 	}
 	public function addToCart($proID){
         
