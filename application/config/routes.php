@@ -59,7 +59,7 @@ $route['account_login'] = 'auths/login';
 
 // pages
 $route['shop'] = 'products/index';
-$route['product_view/(:any)/'] = 'products/product_view/$1';
+$route['(:any)'] = 'products/getProductdetails/$1';
 $route['cart'] = 'products/cart';
 $route['checkout'] = 'products/checkout';
 
