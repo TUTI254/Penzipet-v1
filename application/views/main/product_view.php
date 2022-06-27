@@ -1,278 +1,109 @@
-<?php if($products);
-$related_products = $this->db->get_where('products', array('cate_id' => $products->cate_id))->result();
+<?php
+if($product):
+$related_products = $this->db->get_where('products', array('cate_id' => $product->cate_id))->result();
 ?>
-<section class="single-product">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<ol class="breadcrumb">
-					<li><a href="<?= base_url(); ?>">Home</a></li>
-					<li><a href="<?= base_url('store'); ?>">store</a></li>
-					<li class="active"><?= $products->name; ?></li>
-				</ol>
+			<div class="row">
+				<div class="col" style="margin-top: 180px!important;">
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs d-flex flex-row align-items-center">
+						<ul>
+							<li><a href="<?= base_url(); ?>">Home</a></li>
+							<li><a href="<?= base_url('store'); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i>Shop</a></li>
+							<li class="active"><i class="fa fa-angle-right" aria-hidden="true"></i><?= $product->name; ?></li>
+						</ul>
+					</div>
+
+				</div>
 			</div>
-		</div>
-		<div class="row mt-20">
-			<div class="col-md-5">
-				<div class="single-product-slider">
-					<div id='carousel-custom' class='carousel slide' data-ride='carousel'>
-						<div class='carousel-outer'>
-							<!-- me art lab slider -->
-							<div class='carousel-inner '>
-								<div class='item active'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-1.jpg' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="images p-3">
+									<div class="text-center p-4"> <img id="main-image" src="https://i.imgur.com/Dhebu4F.jpg" width="250" /> </div>
+									<div class="thumbnail text-center"><!-- <img onclick="change_image(this)" src="https://i.imgur.com/Rx7uKd0.jpg" width="70"> <img onclick="change_image(this)" src="https://i.imgur.com/Dhebu4F.jpg" width="70">--> </div>
 								</div>
-								<div class='item'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-2.jpg' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
-								</div>
-								
-								<div class='item'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-3.jpg' alt='' data-zoom-image="images/shop/single-products/product-3.jpg" />
-								</div>
-								<div class='item'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-4.jpg' alt='' data-zoom-image="images/shop/single-products/product-4.jpg" />
-								</div>
-								<div class='item'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-5.jpg' alt='' data-zoom-image="images/shop/single-products/product-5.jpg" />
-								</div>
-								<div class='item'>
-									<img src='<?=base_url();?>assets/images/shop/single-products/product-6.jpg' alt='' data-zoom-image="images/shop/single-products/product-6.jpg" />
-								</div>
-								
 							</div>
-							
+							<div class="col-md-6">
+								<div class="product p-4">
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">Back</span> </div> <i class="fa fa-shopping-cart text-muted"></i>
+									</div>
+									<div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span>
+										<h5 class="text-uppercase">Men's slim fit t-shirt</h5>
+										<div class="price d-flex flex-row align-items-center"> <span class="act-price">$20</span>
+											<div class="ml-2"> <small class="dis-price">$59</small> <span>40% OFF</span> </div>
+										</div>
+									</div>
+									<p class="about">Shop from a wide range of t-shirt from orianz. Pefect for your everyday use, you could pair it with a stylish pair of jeans or trousers complete the look.</p>
+									<div class="sizes mt-5">
+										<h6 class="text-uppercase">Size</h6> <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label> <label class="radio"> <input type="radio" name="size" value="L"> <span>L</span> </label> <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
+									</div>
+									<div class="cart mt-4 align-items-center"> <button class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button> <i class="fa fa-heart text-muted"></i> <i class="fa fa-share-alt text-muted"></i> </div>
+								</div>
+							</div>
 						</div>
-							<!-- sag sol -->
-							<!-- <a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
-								<i class="tf-ion-ios-arrow-left"></i>
-							</a>
-							<a class='right carousel-control' href='#carousel-custom' data-slide='next'>
-								<i class="tf-ion-ios-arrow-right"></i>
-							</a> -->
-						
-						<!-- thumb -->
-						<!-- <ol class='carousel-indicators mCustomScrollbar meartlab'>
-							<li data-target='#carousel-custom' data-slide-to='0' class='active'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-1.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='1'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-2.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='2'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-3.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='3'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-4.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='4'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-5.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='5'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-6.jpg' alt='' />
-							</li>
-							<li data-target='#carousel-custom' data-slide-to='6'>
-								<img src='<?=base_url();?>assets/images/shop/single-products/product-7.jpg' alt='' />
-							</li>
-						</ol> -->
 					</div>
 				</div>
 			</div>
-			<div class="col-md-7">
-				<div class="single-product-details">
-					<h2>Eclipse Crossbody</h2>
-					<p class="product-price">$300</p>
-					
-					<p class="product-description mt-20">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
-					
-					<div class="product-size">
-						<span>Size:</span>
-						<select class="form-control">
-							<option>5 kg</option>
-							<option>15 kg</option>
-							<option>20 kg</option>
-							<!-- <option>XL</option> -->
-						</select>
-					</div>
-					<div class="product-quantity">
-						<span>Quantity:</span>
-						<div class="product-quantity-slider">
-							<input id="product-quantity" type="text" value="0" name="product-quantity">
-						</div>
-					</div>
-					<a href="cart.html" class="btn btn-main mt-20">Add To Cart</a>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="tabCommon mt-20">
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
-						<!-- <li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Reviews (3)</a></li> -->
-					</ul>
-					<div class="tab-content patternbg">
-						<div id="details" class="tab-pane fade active in">
-							<h4>Product Description</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut per spici</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
+
 	</div>
-</section>
-<section class="products related-products section">
-	<div class="container">
-		<div class="row">
-			<div class="title text-center">
-				<h2>Related Products</h2>
+
+	<!-- Tabs -->
+	<div class="tabs_section_container">
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="tabs_container">
+						<ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
+							<li class="tab active" data-active-tab="tab_1"><span>Description</span></li>
+							<li class="tab" data-active-tab="tab_2"><span>Additional Information</span></li>
+							<!-- <li class="tab" data-active-tab="tab_3"><span>Reviews (2)</span></li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<!-- Tab Description -->
+					<div id="tab_1" class="tab_container active">
+						<div class="row">
+							<div class="col-lg-5 desc_col">
+								<div class="tab_title">
+									<h4>Description</h4>
+								</div>
+								<div class="tab_text_block">
+									<h2>Pocket cotton sweatshirt</h2>
+									<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+
+					<!-- Tab Additional Info -->
+
+					<div id="tab_2" class="tab_container">
+						<div class="row">
+							<div class="col additional_info_col">
+								<div class="tab_title additional_info_title">
+									<h4>Additional Information</h4>
+								</div>
+								<p>Weight:<span></span></p>
+								<p>Meant for which pet:<span></span></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="<?=base_url();?>assets/images/shop/products/product-5.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="<?=base_url();?>assets/images/shop/products/product-1.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="<?=base_url();?>assets/images/shop/products/product-2.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="<?=base_url();?>assets/images/shop/products/product-3.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Bradley Mid</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
+
 	</div>
-</section>
+	<?php endif;?>
 
-
-
-<!-- Modal -->
-<div class="modal product-modal fade" id="product-modal">
-	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		<i class="tf-ion-close"></i>
-	</button>
-  	<div class="modal-dialog " role="document">
-    	<div class="modal-content">
-	      	<div class="modal-body">
-	        	<div class="row">
-	        		<div class="col-md-8">
-	        			<div class="modal-image">
-		        			<img class="img-responsive" src="<?=base_url();?>assets/images/shop/products/modal-product.jpg" />
-	        			</div>
-	        		</div>
-	        		<div class="col-md-3">
-	        			<div class="product-short-details">
-	        				<h2 class="product-title">GM Pendant, Basalt Grey</h2>
-	        				<p class="product-price">$200</p>
-	        				<p class="product-short-description">
-	        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
-	        				</p>
-	        				<a href="#!" class="btn btn-main">Add To Cart</a>
-	        				<a href="#!" class="btn btn-transparent">View Product Details</a>
-	        			</div>
-	        		</div>
-	        	</div>
-	        </div>
-    	</div>
-  	</div>
-</div>
+	
