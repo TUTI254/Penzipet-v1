@@ -18,11 +18,11 @@ class Products extends CI_Controller {
         $this->load->view('main/shop',$data);// Load the product shop view 
 		$this->load->view('common/footer',$data);		// Load the footer view
     }
-
-	public function getProductdetails(string $slug){
+public function getProductdetails($id){
 		$data['title'] = 'Product View';
+		$data['products']= $this->product_model->getRows();
         $data['cartItems'] = $this->cart->contents();
-        $output = $this->product_model->getProductDetails($slug, '$slug');
+        $output = $this->product_model->getProductDetails($id, 'id');
         if($output){
             $data['product'] = $output;
             $this->load->view('common/header',$data);
