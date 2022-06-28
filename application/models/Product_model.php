@@ -9,9 +9,9 @@ class Product_model extends CI_Model{
         $this->ordItemsTable = 'order_items';
     }
 
-public function getProductDetails(string $slug, string $field){
-        if($slug != null){
-            $this->db->where($field, $slug);
+public function getProductDetails(string $id, string $field){
+        if($id != null){
+            $this->db->where($field, $id);
             $result = $this->db->get('products');
             if($result->num_rows() > 0){
                 return $result->row();
