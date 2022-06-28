@@ -271,7 +271,7 @@
 										<div class="product-item">
 											<div class="product discount">
 												<div class="product_image">
-												<a href="<?= base_url('products/product_view/'. $row['id']); ?>">
+												<a href="<?= base_url('products/getProductdetails/'. $row['id']); ?>">
 													<img src="<?= base_url(''.$row['image']);?>" alt="">
 												</a>
 												</div>
@@ -367,7 +367,7 @@
 										<div class="product-item">
 											<div class="product discount">
 												<div class="product_image" id="image">
-												<a href="<?= base_url('products/product_view/'. $row['id']); ?>">
+												<a href="<?= base_url('products/getProductdetails/'. $row['id']); ?>">
 													<img src="<?= base_url(''.$row['image']);?>" alt="">
 												</a>
 												</div>
