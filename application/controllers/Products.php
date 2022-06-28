@@ -22,7 +22,7 @@ public function getProductdetails(string $slug){
 		$data['title'] = 'Product View';
 		$data['products']= $this->product_model->getRows();
         $data['cartItems'] = $this->cart->contents();
-        $output = $this->product_model->getProductDetails($slug, '$slug');
+        $output = $this->product_model->getProductDetails($slug, 'slug');
         if($output){
             $data['product'] = $output;
             $this->load->view('common/header',$data);
